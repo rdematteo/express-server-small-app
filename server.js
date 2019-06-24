@@ -27,14 +27,6 @@ mongoose.connect(
 app.use(express.json())
 app.use(cors())
 
-// app.get('/', (req, res) => {
-// imdb.get({name: 'The Toxic Avenger'}, {apiKey: APIKEY, timeout: 30000})
-// .then(movie => {
-//   return res.json(movie);
-// })
-// .then(console.log)
-// .catch(console.log);
-// })
 
 app.get('/movie/all', (req,res) => {
   Movie.find({})
